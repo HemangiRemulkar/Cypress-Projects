@@ -1,0 +1,9 @@
+it('Clicked on OK', function() {
+        cy.wait(5000)
+        cy.get('#action', { timeout: 10000 })
+            .should('exist')
+            .click({ force: true })
+            .then(() => {
+                cy.log('Clicked on OK successfully');
+            });
+});
