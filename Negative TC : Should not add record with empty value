@@ -1,0 +1,18 @@
+it('Should not add record with empty name', function() {
+        cy.get('#name')
+          .clear()
+          .should('have.value', '');
+        cy.get('#mobile')
+          .type('1234567890', { timeout: 4000 });
+          cy.get('#pincode')
+          .type('123456', { timeout: 4000 })
+        cy.get('#email').type('testhk@test.com', { timeout: 4000 });
+        cy.get('#save', { timeout: 4000 }).click();
+        cy.wait(5000)
+        cy.get('#name-error').should('contain', 'This is a required field.')
+        .then(() => {
+            cy.log('Should not record with empty name');
+      })
+      
+
+    })
