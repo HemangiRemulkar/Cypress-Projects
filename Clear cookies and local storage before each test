@@ -1,0 +1,5 @@
+// Clear cookies and local storage before each test
+beforeEach(() => {
+    cy.clearCookies();
+    cy.clearLocalStorage();
+});
