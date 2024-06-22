@@ -1,0 +1,4 @@
+it('Click button', function() {
+     cy.scrollTo(0, 800);  
+     cy.get('#cbutton').click()
+})
